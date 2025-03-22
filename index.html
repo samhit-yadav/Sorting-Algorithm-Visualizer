@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sorting Algorithm Visualizer</title>
+    
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Sorting Algorithm Visualizer</h1>
+        
+        <div class="controls">
+            <div class="control-group">
+                <label for="algorithm">Algorithm:</label>
+                <select id="algorithm">
+                    <option value="bubble">Bubble Sort</option>
+                    <option value="quick">Quick Sort</option>
+                    <option value="merge">Merge Sort</option>
+                </select>
+            </div>
+            
+            <div class="control-group">
+                <label for="speed">Speed:</label>
+                <select id="speed">
+                    <option value="fast">Fast</option>
+                    <option value="medium" selected>Medium</option>
+                    <option value="slow">Slow</option>
+                </select>
+            </div>
+            
+            <div class="control-group">
+                <label for="size">Size:</label>
+                <input type="range" id="size" min="5" max="100" value="50">
+                <span id="size-value">50</span>
+            </div>
+            
+            <div class="button-group">
+                <button id="randomize">Randomize</button>
+                <button id="sort">Sort</button>
+                <button id="stop">Stop</button>
+            </div>
+        </div>
+        
+        <div id="array-container">
+            
+        </div>
+        
+        <div class="legend">
+            <div class="legend-item">
+                <div class="color-box default"></div>
+                <span>Unsorted</span>
+            </div>
+            <div class="legend-item">
+                <div class="color-box comparing"></div>
+                <span>Comparing</span>
+            </div>
+            <div class="legend-item">
+                <div class="color-box swapping"></div>
+                <span>Swapping</span>
+            </div>
+            <div class="legend-item">
+                <div class="color-box sorted"></div>
+                <span>Sorted</span>
+            </div>
+            <div class="legend-item">
+                <div class="color-box pivot"></div>
+                <span>Pivot (Quick Sort)</span>
+            </div>
+        </div>
+    </div>
+    
+    <!-- <script src="sorting-visualizer-js.js"></script> -->
+    <script src="index.js"></script>
+</body>
+</html>
